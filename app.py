@@ -41,6 +41,7 @@ def test():
 
 @app.route('/process', methods = ['GET','POST'])
 def process():
+    print request
     if request.method == 'POST':
         file = request.files['file']
         hocr = request.form.get('hocr') or ''
